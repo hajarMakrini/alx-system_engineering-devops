@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
-# displays numbers from 1 to 100
-counter=0
-while [ $counter -lt 100 ]; do
-	(( counter+=1 ))
-	if (( counter % 3 == 0 )) && (( counter % 5 == 0 )); then
-		echo "FizzBuzz"
-	continue
-	elif (( counter % 3 == 0 )); then
-		echo "Fizz"
-	continue
-	elif (( counter % 5 == 0 )); then
-		echo "Buzz"
-	continue
-	fi
-	echo "$counter"
+# displays Best School 10 times.
+
+COUNTER=1
+while [ $COUNTER -lt 101 ]
+do
+    if [ $((COUNTER%15)) = 0 ]
+    then
+        echo "FizzBuzz"
+    elif [ $((COUNTER%3)) = 0 ]
+    then
+        echo "Fizz"
+    elif [ $((COUNTER%5)) = 0 ]
+    then
+        echo "Buzz"
+    else
+        echo "$COUNTER"
+    fi
+    let COUNTER+=1
 done

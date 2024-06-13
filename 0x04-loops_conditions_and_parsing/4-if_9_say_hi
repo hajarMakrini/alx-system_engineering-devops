@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
-# Displays Hi on the 9th line
-string_a='Holberton School'
-counter=0
-while [ $counter -lt 10 ]; do
-	echo "$string_a"
-	(( counter+=1 ))
-	if [ $counter -eq 9 ]; then
-		echo "Hi"
-	fi
+# displays Best School 10 times.
+
+COUNTER=0
+while [ $COUNTER -lt 11 ]
+do
+    if [ $COUNTER = 9 ]
+    then
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+    let COUNTER+=1
 done
