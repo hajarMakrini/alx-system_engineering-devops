@@ -1,6 +1,6 @@
 # Postmortem: Memory Leak in Application
-![Description de l'image](/0x19-postmortem
-/images/README.md)
+![img](alx-system_engineering-devops/0x19-postmortem
+/Screenshot 2024-06-22 at 22-34-59 image illustre Memory Leak in Application - Recherche Google.png)
 
 ## Issue Summary
 
