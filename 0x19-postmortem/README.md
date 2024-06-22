@@ -1,6 +1,5 @@
 # Postmortem: Memory Leak in Application
-![img](alx-system_engineering-devops/0x19-postmortem
-/Screenshot 2024-06-22 at 22-34-59 image illustre Memory Leak in Application - Recherche Google.png)
+![img](/Screenshot 2024-06-22 at 22-34-59 image illustre Memory Leak in Application - Recherche Google.png)
 
 ## Issue Summary
 
