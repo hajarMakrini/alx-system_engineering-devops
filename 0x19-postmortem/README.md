@@ -1,4 +1,6 @@
 # Postmortem: Memory Leak in Application
+![Description de l'image](/0x19-postmortem
+/images/README.md)
 
 ## Issue Summary
 
