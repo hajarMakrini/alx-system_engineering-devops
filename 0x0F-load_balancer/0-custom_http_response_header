@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# a script for creating 301 redirection
+
+sudo apt-get update
+sudo apt-get install nginx -y
+
+sudo chown -R "$USER":"sudo" /var/www/html
+echo "Hello World!" > /var/www/html/index.html
+config="/etc/nginx/sites-available/default"
+REDIRECT="\
+	location /redirect {\n\
+		return 301 https://www.google.com/;\n\
+	}\n"
+
+sudo sed -i "/server_name _;/a\ $REDIRECT" "$config"
+
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+F04="\terror_page 404 /404.html;"
+R2404="\
+	location /404.html {\n\
+		root /var/www/html/;\n\
+		internal;\n\
+	}"
+sudo sed -i "/server_name _;/a\ $R2404" "$config"
+sudo sed -i "/server_name _;/a\ $F04" "$config"
+
+header="\n\tadd_header X-Served-By \$hostname;"
+sudo sed -i "/server_name _;/a\ $header" "$config"
+
+sudo service nginx restart
